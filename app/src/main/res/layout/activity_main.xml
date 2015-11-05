@@ -1,0 +1,262 @@
+<android.support.v4.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <Button
+        android:id="@+id/buttonExpense"
+        android:text="Despesas"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/buttonReceipe"
+        android:text="Receitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonExpense"
+        android:layout_toRightOf="@+id/buttonExpense"
+        android:layout_toEndOf="@+id/buttonExpense" />
+
+    <Button
+        android:id="@+id/buttonGoal"
+        android:text="Metas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonReceipe"
+        android:layout_toRightOf="@+id/buttonReceipe"
+        android:layout_toEndOf="@+id/buttonReceipe" />
+
+    <Button
+        android:id="@+id/buttonCard"
+        android:text="Cartões"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonGoal"
+        android:layout_toRightOf="@+id/buttonGoal"
+        android:layout_toEndOf="@+id/buttonGoal" />
+
+    <!-- CONTEUDO OFICIAL -->
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_below="@+id/buttonExpense"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        card_view:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/primaryColor"
+            android:id="@+id/textViewLabelResume"
+            android:text="@string/label_resume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textViewCurrentBalance"
+            android:gravity="center"
+            android:layout_below="@+id/textViewLabelResume"
+            android:textColor="@color/colorText"
+            android:text="Current Balance R$ 00.00"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewBankBalance"
+            android:gravity="center"
+            android:layout_below="@+id/textViewCurrentBalance"
+            android:textColor="@color/colorText"
+            android:text="Bank R$ 00.00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewWalletBalance"
+            android:gravity="center"
+            android:layout_below="@+id/textViewBankBalance"
+            android:textColor="@color/colorText"
+            android:text="Wallet R$ 00.00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewCumulativeValueNextMonth"
+            android:text="@string/value_next_month"
+            android:gravity="center"
+            android:layout_below="@+id/textViewWalletBalance"
+            android:textSize="15dp"
+            android:textColor="#E57373"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            card_view:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="@color/primaryColor"
+                    android:id="@+id/textViewLabelLimitCard"
+                    android:text="@string/label_limit_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewNameCard"
+                    android:text="Nome do Cartão"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewAmountSpent"
+                    android:text="Valor gasto"
+                    android:textColor="@color/colorText"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewLimitValue"
+                    android:text="R$ 00.00"
+                    android:textColor="@color/colorText"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <com.daimajia.numberprogressbar.NumberProgressBar
+                    android:id="@+id/number_progress_bar"
+                    android:layout_width="match_parent"
+                    app:progress_text_size="15dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    app:progress_text_color="@color/primaryColor"
+                    app:progress_reached_color="#26A69A"
+                    app:progress_unreached_color="#cccccc"
+                    android:layout_marginTop="19dp"/>
+
+                <TextView
+                    android:id="@+id/textViewLogCard"
+                    android:textColor="#ff0900"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            card_view:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="20sp"
+            android:gravity="center"
+            android:id="@+id/titleCard"
+            android:textColor="@color/primaryColor"
+            android:text="@string/label_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewTotalReceipeValueTotal"
+                android:layout_width="match_parent"
+                android:text="Teste"
+                android:textColor="@color/colorText"
+                android:gravity="center"
+                android:layout_below="@+id/titleCard"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewTotalExpenseValueTotal"
+                android:layout_width="match_parent"
+                android:text="Teste 2"
+                android:textColor="@color/colorText"
+                android:gravity="center"
+                android:layout_below="@+id/textViewTotalReceipeValueTotal"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>
+<fragment
+    android:id="@+id/fragment_drawer_navigation"
+    android:layout_width="@dimen/nav_draw"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    app:layout="@layout/fragment_navigation_drawer"
+    android:name="com.finance.projeto.projetofinance.controllers.activities.activities.NavigationDrawerFragment"
+    tools:layout="@layout/fragment_navigation_drawer" />
+</android.support.v4.widget.DrawerLayout>

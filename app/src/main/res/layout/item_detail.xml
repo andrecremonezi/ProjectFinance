@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/toolbar_dropshadow"
+        android:id="@+id/view" />
+
+    <android.support.v7.widget.CardView
+        card_view:cardUseCompatPadding="true"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewTitleDetail"
+            android:text="Detalhes da despesa"
+            android:textColor="@color/primaryColor"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDetailLabelName"
+            android:text="Nome da Despesa: "
+            android:layout_below="@+id/textViewTitleDetail"
+            android:textColor="@color/navigationBarColor"
+            android:layout_margin="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/textViewDetailName"
+            android:text="Despesa 01"
+            android:layout_below="@+id/textViewTitleDetail"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/textViewDetailLabelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDetailLabelValue"
+            android:text="Valor R$: "
+            android:textColor="@color/navigationBarColor"
+            android:layout_margin="3dp"
+            android:layout_below="@+id/textViewDetailLabelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDetailValue"
+            android:text="00.00"
+            android:textColor="@color/primaryColor"
+            android:layout_margin="3dp"
+            android:layout_below="@+id/textViewDetailLabelName"
+            android:layout_toRightOf="@+id/textViewDetailLabelValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDetailLabelCategory"
+            android:text="Categoria: "
+            android:layout_margin="3dp"
+            android:layout_below="@+id/textViewDetailLabelValue"
+            android:textColor="@color/navigationBarColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDetailCategory"
+            android:text="Categoria 01"
+            android:layout_below="@+id/textViewDetailLabelValue"
+            android:layout_toRightOf="@+id/textViewDetailLabelCategory"
+            android:layout_margin="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDetailLabelForm"
+            android:text="Forma de pagamento: "
+            android:layout_below="@+id/textViewDetailCategory"
+            android:layout_margin="3dp"
+            android:textColor="@color/navigationBarColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDetailForm"
+            android:text="Carteira"
+            android:layout_margin="3dp"
+            android:layout_below="@+id/textViewDetailCategory"
+            android:layout_toRightOf="@+id/textViewDetailLabelForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDetailLabelMonth"
+            android:text="Mês: "
+            android:textColor="@color/navigationBarColor"
+            android:layout_below="@+id/textViewDetailLabelForm"
+            android:layout_margin="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewDetailMonth"
+                android:text="Janeiro"
+                android:layout_margin="3dp"
+                android:layout_below="@+id/textViewDetailLabelForm"
+                android:layout_toRightOf="@+id/textViewDetailLabelMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewLabelPaid"
+            android:text="Status pagamento: "
+            android:layout_margin="3dp"
+            android:textColor="@color/navigationBarColor"
+            android:layout_below="@+id/textViewDetailMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewPaid"
+            android:text="Pago"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/textViewLabelPaid"
+            android:layout_below="@+id/textViewDetailMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/buttonEditItem"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@color/primaryColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_edit"
+            android:layout_toLeftOf="@+id/buttonDeleteItem"
+            android:layout_below="@+id/textViewLabelPaid" />
+
+        <Button
+            android:id="@+id/buttonDeleteItem"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@color/primaryColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_delete"
+            android:layout_below="@+id/textViewLabelPaid"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

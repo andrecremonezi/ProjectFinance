@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/toolbar_dropshadow"
+        android:id="@+id/view" />
+
+    <android.support.v7.widget.CardView
+        card_view:cardUseCompatPadding="true"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewTitleDetail"
+                android:text="Detalhes da meta"
+                android:textColor="@color/primaryColor"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewDetailLabelNameGoal"
+                android:text="Categoria da meta: "
+                android:layout_below="@+id/textViewTitleDetail"
+                android:textColor="@color/colorText"
+                android:layout_margin="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/textViewDetailNameGoal"
+                android:text="Transporte"
+                android:layout_below="@+id/textViewTitleDetail"
+                android:layout_margin="3dp"
+                android:layout_toRightOf="@+id/textViewDetailLabelNameGoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewDetailLabelValueGoal"
+                android:text="Valor R$: "
+                android:textColor="@color/colorText"
+                android:layout_margin="3dp"
+                android:layout_below="@+id/textViewDetailLabelNameGoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewDetailValueGoal"
+                android:text="00.00"
+                android:layout_margin="3dp"
+                android:layout_below="@+id/textViewDetailLabelNameGoal"
+                android:layout_toRightOf="@+id/textViewDetailLabelValueGoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/buttonEditItemGoal"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/primaryColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_edit"
+                android:layout_toLeftOf="@+id/buttonDeleteItemGoal"
+                android:layout_below="@+id/textViewDetailValueGoal" />
+
+            <Button
+                android:id="@+id/buttonDeleteItemGoal"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/primaryColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_delete"
+                android:layout_below="@+id/textViewDetailValueGoal"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

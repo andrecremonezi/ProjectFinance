@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_editar"
+        app:showAsAction="always"
+        android:title="@string/lbl_edit">
+
+    </item>
+
+    <item
+        android:id="@+id/menu_excluir"
+        app:showAsAction="always"
+        android:title="@string/lbl_delete">
+
+    </item>
+
+</menu>

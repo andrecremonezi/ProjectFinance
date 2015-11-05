@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="icon">#ffffff</color>
+
+    <color name="acentColor">#009688</color>
+    <color name="divider">#b6b6b6</color>
+
+    <color name="colorAccent100">#B2DFDB</color>
+    <color name="colorAccent200">#80CBC4</color>
+    <color name="colorAccent400">#26A69A</color>
+    <color name="colorAccent700">#00796B</color>
+    <color name="colorText">#616161</color>
+    <color name="colorTextAccent">#FFFFFF</color>
+
+    <color name="buttonColor">#F44336</color>
+    <color name="buttonPressed">#D32F2F</color>
+
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="hintColor">#BDBDBD</color>
+    <color name="categoryLabel">#9E9E9E</color>
+
+</resources>

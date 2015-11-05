@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/textViewLabel"
+            android:layout_width="45dp"
+            android:textSize="20dp"
+            android:background="@drawable/frame"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/textViewReceipeDescription"
+            android:text="Description"
+            android:textSize="15dp"
+            android:textColor="@color/colorText"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewLabel"
+            android:layout_toRightOf="@+id/textViewLabel"
+            android:layout_toEndOf="@+id/textViewLabel" />
+
+        <TextView
+            android:id="@+id/textViewReceipeCategory"
+            android:text="Category"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:textColor="@color/categoryLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textViewLabel"
+            android:layout_toRightOf="@+id/textViewLabel"
+            android:layout_toEndOf="@+id/textViewLabel" />
+
+
+        <TextView
+            android:id="@+id/textViewReceipeValue"
+            android:text="Value"
+            android:textColor="@color/primaryColor"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewReceipeDescription"
+            android:layout_alignLeft="@+id/textViewReceipeDescription"
+            android:layout_alignStart="@+id/textViewReceipeDescription" />
+
+        <TextView
+            android:id="@+id/textViewReceipeForm"
+            android:layout_width="wrap_content"
+            android:text="Form"
+            android:textColor="@color/categoryLabel"
+            android:layout_marginTop="2dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewReceipeValue"
+            android:layout_alignRight="@+id/textViewReceipeValue"
+            android:layout_alignEnd="@+id/textViewReceipeValue"/>
+    </RelativeLayout>
+
+</LinearLayout>

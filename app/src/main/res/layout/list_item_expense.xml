@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/textViewExpenseDescription"
+            android:layout_toLeftOf="@+id/textViewExpenseDescription" />
+
+        <ImageView
+            android:id="@+id/textViewLabel"
+            android:layout_width="45sp"
+            android:text="@string/label_letter"
+            android:textSize="20sp"
+            android:background="@drawable/frame"
+            android:layout_height="45sp"
+            android:gravity="center"
+            android:layout_margin="10sp"/>
+
+    <TextView
+        android:id="@+id/textViewExpenseDescription"
+        android:text="Description"
+        android:textSize="15sp"
+        android:textColor="@color/colorText"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_alignTop="@+id/textViewLabel"
+        android:layout_toRightOf="@+id/textViewLabel"
+        android:layout_toEndOf="@+id/textViewLabel" />
+
+    <TextView
+        android:id="@+id/textViewExpenseCategory"
+        android:text="Category"
+        android:textSize="15sp"
+        android:layout_weight="1"
+        android:textColor="@color/categoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewLabel"
+        android:layout_alignLeft="@+id/textViewExpenseDescription"
+        android:layout_alignStart="@+id/textViewExpenseDescription" />
+
+
+    <TextView
+        android:id="@+id/textViewExpenseValue"
+        android:text="Value"
+        android:textSize="15sp"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:layout_marginEnd="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewExpenseDescription"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/textViewForm"
+            android:text="Form"
+            android:layout_marginTop="2sp"
+            android:textColor="@color/categoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewExpenseValue"
+            android:layout_alignRight="@+id/textViewExpenseValue"
+            android:layout_alignEnd="@+id/textViewExpenseValue" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

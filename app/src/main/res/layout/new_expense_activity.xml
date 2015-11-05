@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/toolbar"
+            android:background="@drawable/toolbar_dropshadow" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <android.support.v7.widget.CardView
+            card_view:cardUseCompatPadding="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+    <EditText
+        android:id="@+id/editTextNewDescriptionExpense"
+        android:hint="@string/description"
+        android:textColorHint="@color/hintColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/editTextNewValueExpense"
+        android:hint="@string/value_expense"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/editTextNewDescriptionExpense"
+        android:textColorHint="@color/hintColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textViewLabelCategory"
+        android:text="@string/category"
+        android:textSize="18sp"
+        android:layout_below="@+id/editTextNewValueExpense"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/primaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spinnerNewTypeExpense"
+        android:prompt="@string/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewLabelCategory"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="29dp">
+    </Spinner>
+
+
+     <TextView
+         android:id="@+id/textViewForm"
+         android:text="@string/form"
+         android:textSize="18sp"
+         android:textColor="@color/primaryColor"
+         android:layout_below="@+id/spinnerNewTypeExpense"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinnerNewFormExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewForm"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/textViewMonth"
+                    android:text="@string/month_expense"
+                    android:textSize="18sp"
+                    android:textColor="@color/primaryColor"
+                    android:layout_below="@+id/spinnerNewFormExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinnerNewMonthExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewMonth"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/textViewRadio"
+                    android:text="@string/radio_check"
+                    android:textSize="18sp"
+                    android:textColor="@color/primaryColor"
+                    android:layout_below="@+id/spinnerNewMonthExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RadioGroup
+                    android:id="@+id/rgopcoes"
+                    android:layout_below="@id/textViewRadio"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_yes"
+                    android:id="@+id/rY"
+                    android:layout_below="@+id/spinnerNewMonthExpense"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_no"
+                    android:checked="true"
+                    android:id="@+id/rN"
+                    android:layout_below="@+id/spinnerNewMonthExpense"/>
+
+                </RadioGroup>
+    <Button
+        android:id="@+id/buttonAddExpense"
+        android:text="@string/save"
+        android:textColor="@color/windowBackground"
+        android:layout_width="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_below="@+id/rgopcoes"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>

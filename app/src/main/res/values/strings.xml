@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">ProjetoFinance</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="msg_login_error">User or Password incorrect !</string>
+    <string name="msg_field_required">Field required !</string>
+    <string name="msg_user_create_sucess">User create sucess !</string>
+    <string name="msg_expense_create_sucess">New expense add !</string>
+    <string name="msg_receipe_create_sucess">Receipe create sucess !</string>
+    <string name="lbl_confirm_delet_expense">Confirm delet</string>
+    <string name="msg_confirm_delete_expense">You confirm delete this expense?</string>
+    <string name="lbl_confirm_delet_receipe">Confirm delet</string>
+    <string name="msg_confirm_delete_receipe">You confirm delete this receipe?</string>
+    <string name="lbl_yes">Yes</string>
+    <string name="msg_delete_sucessfull">Delete sucess</string>
+    <string name="lbl_no">No</string>
+    <string name="lbl_delete">delete</string>
+    <string name="lbl_edit">edit</string>
+    <string name="description">Description</string>
+    <string name="value">Value</string>
+    <string name="category">Category</string>
+    <string name="label_expense">Expense</string>
+    <string name="label_login">Login</string>
+    <string name="label_newExpense">New expense</string>
+    <string name="label_newReceipe">New receipe</string>
+    <string name="label_newLogin">New login</string>
+    <string name="label_overview">Overview</string>
+    <string name="label_receipe">Receipe</string>
+    <string name="label_main">Main</string>
+    <string name="label_listReceipe">Recipe list</string>
+    <string name="label_listGoal">Goal list</string>
+    <string name="label_listExpense">Expense list</string>
+    <string name="label_letter">A</string>
+    <string name="installments">Installments</string>
+    <string name="save">Save</string>
+    <string name="nameItem">Name Item</string>
+    <string name="msg_goal_create_sucess">Goal create sucess</string>
+    <string name="label_newGoal">New Goal</string>
+    <string name="label_goal">Goal</string>
+    <string name="labelAmountSpent">Amount Spent: </string>
+    <string name="labelAmountTotal">Total Amount: </string>
+    <string name="label_listCard">Card</string>
+    <string name="card_name">Name Card</string>
+    <string name="card_value_limit">Limit Value</string>
+    <string name="card_value_limit_label">Limit Value: </string>
+    <string name="msg_card_create_sucess">Card create sucess</string>
+    <string name="label_card">Card</string>
+    <string name="label_newCard">New Card</string>
+    <string name="label_resume">Resume</string>
+    <string name="label_limit_card">Limit Card</string>
+    <string name="label_name_card">Name Card</string>
+    <string name="label_amount_spent">Amount Spent</string>
+    <string name="label_amount_limit">Limit value</string>
+    <string name="label_current_balance">Current Balance R$</string>
+    <string name="total">Total R$ </string>
+    <string name="label_bank">Bank R$ </string>
+    <string name="label_wallet">Wallet R$</string>
+    <string name="label_card_total_value">Limit value R$</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+    <string name="form">Form</string>
+    <string name="label_info">Informações deste mês</string>
+    <string name="label_total_receipe">Total em Receitas: R$</string>
+    <string name="label_total_expense">Total em Despesas: R$</string>
+    <string name="label_amount_spent_card">Value spent R$</string>
+    <string name="label_card_name">Name do cartão </string>
+    <string name="value_next_month">Cumulative value</string>
+    <string name="value_cumulative">Value next month R$</string>
+    <string name="total_this_month">Total this month R$</string>
+    <string name="total_next_month">Total próximo mês R$</string>
+    <string name="month_expense">Month</string>
+    <string name="total_nexts_months">Nexts Months</string>
+    <string name="label_item">Detail</string>
+    <string name="value_expense">Value</string>
+    <string name="lbl_confirm_delet_card">Confirm delete</string>
+    <string name="msg_confirm_delete_card">Delete this card?</string>
+    <string name="lbl_confirm_delet_goal">Confirm delete</string>
+    <string name="msg_confirm_delete_goal">Delete this goal?</string>
+    <string name="radio_check">This expense is paid ?</string>
+    <string name="expense">Expense</string>
+    <string name="receipe">Receipe</string>
+    <string name="goal">Goal</string>
+    <string name="card">Card</string>
+    <string name="logoff">Logoff</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/buttonNewGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_action_content_add"
+        fab:fab_colorNormal="@color/acentColor"
+        fab:fab_colorPressed="@color/colorAccent700"
+        fab:fab_colorRipple="@color/colorAccent400" />
+
+    <TextView
+        android:id="@+id/textViewListGoal"
+        android:text="@string/label_listGoal"
+        android:textStyle="bold"
+        android:textColor="#818181"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:background="@color/windowBackground"
+        android:id="@+id/listViewGoal"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/textViewListGoal"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

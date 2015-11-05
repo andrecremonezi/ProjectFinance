@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.finance.projeto.projetofinance" >
+
+    <application
+        android:name=".managerApplication.ManagerApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MyTheme" >
+
+        <activity
+            android:name=".controllers.activities.activities.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.LoginActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.ItemDetailActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.CardDetailActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.ReceipeDetailActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.GoalDetailActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.NewUserActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.ExpenseActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.ReceipeActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.NewExpenseActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.NewReceipeActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.GoalActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.NewGoalActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.NewCardActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".controllers.activities.activities.CardActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+    </application>
+
+</manifest>
