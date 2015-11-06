@@ -6,13 +6,16 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.finance.projeto.projetofinance.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NavigationDrawerFragment extends Fragment {
 
@@ -23,6 +26,9 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mUserLearnedDrawer;
     private boolean mFromSavedInstanceState;
     private View containerView;
+    private RecyclerView recyclerView;
+    private InformationAdapter adapter;
+
 
     public NavigationDrawerFragment() {
         // Required empty public constructor
@@ -41,11 +47,33 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        recyclerView = (RecyclerView) layout.findViewById(R.id.drawerList);
+        adapter = new InformationAdapter(getActivity(),getData());
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        return layout;
+    }
+
+    public static List<Information> getData() {
+        List<Information> data = new ArrayList<>();
+        int[] icons = {R.drawable.ic_expense, R.drawable.ic_receipe, R.drawable.ic_goal, R.drawable.ic_card};
+        String[] titles = {"Despesas", "Receitas","Metas","Cartão"};
+
+        for (int i = 0; i < titles.length && i < icons.length; i++){
+            Information current = new Information();
+            current.iconId = icons[i];
+            current.title  = titles[i];
+
+            data.add(current);
+        }
+
+        return data;
     }
 
 
-    public void setUp(int fragmentId, final DrawerLayout drawerLayout, Toolbar toolbar) {
+
+    public void setUp(int fragmentId, final DrawerLayout drawerLayout, final Toolbar toolbar) {
         containerView = getActivity().findViewById(fragmentId);
         mDrawerLayout = drawerLayout;
         mDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close){
@@ -63,6 +91,7 @@ public class NavigationDrawerFragment extends Fragment {
                 super.onDrawerClosed(drawerView);
                 getActivity().invalidateOptionsMenu();
             }
+
         };
 
         if(!mUserLearnedDrawer && !mFromSavedInstanceState){

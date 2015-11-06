@@ -10,6 +10,7 @@
         <item name="colorAccent">@color/acentColor</item>
         <item name="icon">@color/icon</item>
         <item name="divider">@color/divider</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
 

@@ -16,6 +16,7 @@
 
     <color name="buttonColor">#F44336</color>
     <color name="buttonPressed">#D32F2F</color>
+    <color name="buttonRipple">#EF5350</color>
 
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="windowBackground">#FFFFFF</color>
