@@ -20,7 +20,6 @@
                 android:id="@+id/toolbar"
                 layout="@layout/toolbar" />
 
-
             <FrameLayout
                 android:id="@+id/container"
                 android:layout_width="match_parent"
@@ -38,46 +37,11 @@
                 android:layout_below="@+id/toolbar"
                 android:background="@drawable/toolbar_dropshadow" />
 
-            <Button
-                android:id="@+id/buttonExpense"
-                android:text="Despesas"
-                android:layout_below="@+id/toolbar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/buttonReceipe"
-                android:text="Receitas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/buttonExpense"
-                android:layout_toRightOf="@+id/buttonExpense"
-                android:layout_toEndOf="@+id/buttonExpense" />
-
-            <Button
-                android:id="@+id/buttonGoal"
-                android:text="Metas"
-                android:layout_below="@+id/toolbar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/buttonReceipe"
-                android:layout_toRightOf="@+id/buttonReceipe"
-                android:layout_toEndOf="@+id/buttonReceipe" />
-
-            <Button
-                android:id="@+id/buttonCard"
-                android:text="Cartões"
-                android:layout_below="@+id/toolbar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/buttonGoal"
-                android:layout_toRightOf="@+id/buttonGoal"
-                android:layout_toEndOf="@+id/buttonGoal" />
 
             <!-- CONTEUDO OFICIAL -->
             <LinearLayout
                 android:id="@+id/layout1"
-                android:layout_below="@+id/buttonExpense"
+                android:layout_below="@+id/toolbar"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

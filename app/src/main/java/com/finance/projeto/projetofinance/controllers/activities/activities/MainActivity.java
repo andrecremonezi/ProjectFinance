@@ -1,11 +1,13 @@
 package com.finance.projeto.projetofinance.controllers.activities.activities;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -21,10 +23,6 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private Button buttonExpense;
-    private Button buttonReceipe;
-    private Button buttonGoal;
-    private Button buttonCard;
     private Toolbar toolbar;
     private TextView currentBalance;
     private TextView bankBalance;
@@ -46,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
         bindToolbar();
         bindDrawer();
-        bindButtonExpense();
-        bindButtonReceipe();
-        bindButtonGoal();
-        bindButtonCard();
         bindFields();
 
     }
@@ -148,31 +142,6 @@ public class MainActivity extends AppCompatActivity {
         textViewExpenseValue.setText(getString(R.string.label_total_expense) + " " + df.format(totalExpenseValue));
     }
 
-    private void bindButtonGoal() {
-        buttonGoal = (Button) findViewById(R.id.buttonGoal);
-
-        buttonGoal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent redirectToTaskList = new Intent(MainActivity.this, GoalActivity.class);
-                redirectToTaskList.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(redirectToTaskList);
-            }
-        });
-    }
-
-    private void bindButtonCard() {
-        buttonCard = (Button) findViewById(R.id.buttonCard);
-
-        buttonCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent redirectToTaskList = new Intent(MainActivity.this, CardActivity.class);
-                redirectToTaskList.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(redirectToTaskList);
-            }
-        });
-    }
 
     private void bindToolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -182,30 +151,5 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
-    public void bindButtonExpense(){
-        buttonExpense = (Button) findViewById(R.id.buttonExpense);
-
-        buttonExpense.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent redirectToTaskList = new Intent(MainActivity.this, ExpenseActivity.class);
-                redirectToTaskList.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(redirectToTaskList);
-            }
-        });
-    }
-
-    public void bindButtonReceipe(){
-        buttonReceipe = (Button) findViewById(R.id.buttonReceipe);
-
-        buttonReceipe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent redirectToTaskList = new Intent(MainActivity.this, ReceipeActivity.class);
-                redirectToTaskList.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(redirectToTaskList);
-            }
-        });
-    }
 
 }
