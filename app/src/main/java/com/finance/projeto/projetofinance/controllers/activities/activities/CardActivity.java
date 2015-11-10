@@ -155,7 +155,6 @@ public class CardActivity extends AppCompatActivity {
                         String message = getString(R.string.msg_delete_sucessfull);
                         onUpdateList();
                         Toast.makeText(CardActivity.this, message, Toast.LENGTH_LONG).show();
-
                     }
                 })
                 .setNeutralButton(R.string.lbl_no, null)
