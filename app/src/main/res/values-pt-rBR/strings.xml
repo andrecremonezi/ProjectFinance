@@ -63,10 +63,10 @@
     <string name="label_card_name">Nome</string>
     <string name="value_cumulative">Despesas do proximo mês R$</string>
     <string name="total_this_month">Total deste mês R$</string>
-    <string name="month_expense">Mês da despesa</string>
+    <string name="month_expense">Parcelas</string>
     <string name="total_nexts_months">Total após o próximo mês R$</string>
     <string name="label_item">Detalhes</string>
-    <string name="value_expense">Valor despesa/parcela</string>
+    <string name="value_expense">Valor despesa</string>
     <string name="lbl_confirm_delet_card">Confirmar exclusão do cartão</string>
     <string name="msg_confirm_delete_card">Deletar este cartão?</string>
     <string name="lbl_confirm_delet_goal">Confirmar exclusão da meta</string>

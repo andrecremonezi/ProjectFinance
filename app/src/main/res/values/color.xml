@@ -23,5 +23,8 @@
     <color name="navigationBarColor">#000000</color>
     <color name="hintColor">#BDBDBD</color>
     <color name="categoryLabel">#9E9E9E</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="colorHightLight">#B6B6B6</color>
 
 </resources>

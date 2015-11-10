@@ -23,7 +23,7 @@ import java.util.GregorianCalendar;
 public class NewExpenseActivity extends AppCompatActivity{
     private String[] forms = new String[] {"Carteira","Cartão","Banco"};
     private String[] typeCategory = new String[] {"Academia","Alimentação","Contas","Estudos","Ferramentas","Video Game","Investimento","Lazer","Moradia","Roupas","Saúde","Telefone","Transporte","Viagem","Outros"};
-    private String[] months = new String[] {"Apenas este mês","Apenas próximo mês","Nos próximos 3 meses","Nos próximos 6 meses","Nos próximos 12 meses"};
+    private String[] months = new String[] {"Apenas este mês","Apenas próximo mês","Este mês + 1x","Este mês + 2x","Este mês + 3x","Este mês + 4x","Este mês + 5x","Este mês + 6x","Este mês + 7x","Este mês + 8x","Este mês + 9x","Este mês + 10x","Este mês + 11x"};
     private EditText editTextDescription;
     private EditText editTextValue;
     private Spinner  spinnerType;
@@ -96,45 +96,122 @@ public class NewExpenseActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 String requiredMessage = NewExpenseActivity.this.getString(R.string.msg_field_required);
+                Double value = Double.parseDouble(editTextValue.getText().toString());
+
                 if (!FormHelper.validateRequired(requiredMessage, editTextDescription, editTextValue)) {
 
                     //1 mes
                     if(spinnerMonth.getSelectedItem().toString().equals("Apenas este mês")) {
                         for(int i = 1; i <= 1; i++) {
-                            bindExpense(i);
+                            bindExpense(i, value);
+                            ExpenseBussinessService.save(expense);
+                        }
+                    }
+
+                    //prox mes
+                    if(spinnerMonth.getSelectedItem().toString().equals("Apenas próximo mês")) {
+                        for(int i = 2; i <= 2; i++) {
+                            bindExpense(i, value);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //2 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Apenas próximo mês")) {
-                        for(int i = 2; i <= 2; i++) {
-                            bindExpense(i);
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 1x")) {
+                        Double valueDiv = value/2;
+                        for(int i = 1; i <= 2; i++) {
+                            bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
+
                     //3 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Nos próximos 3 meses")) {
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 2x")) {
+                        Double valueDiv = value/3;
                         for(int i = 1; i <= 3; i++) {
-                            bindExpense(i);
+                            bindExpense(i, valueDiv);
+                            ExpenseBussinessService.save(expense);
+                        }
+                    }
+
+                    //4 meses
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 3x")) {
+                        Double valueDiv = value/4;
+                        for(int i = 1; i <= 4; i++) {
+                            bindExpense(i, valueDiv);
+                            ExpenseBussinessService.save(expense);
+                        }
+                    }
+
+                    //5 meses
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 4x")) {
+                        Double valueDiv = value/5;
+                        for(int i = 1; i <= 5; i++) {
+                            bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //6 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Nos próximos 6 meses")) {
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 5x")) {
+                        Double valueDiv = value/6;
                         for(int i = 1; i <= 6; i++) {
-                            bindExpense(i);
+                            bindExpense(i, valueDiv);
+                            ExpenseBussinessService.save(expense);
+                        }
+                    }
+
+                    //7 meses
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 6x")) {
+                        Double valueDiv = value/7;
+                        for(int i = 1; i <= 7; i++) {
+                            bindExpense(i, valueDiv);
+                            ExpenseBussinessService.save(expense);
+                        }
+                    }
+
+                    //8 meses
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 7x")) {
+                        Double valueDiv = value/8;
+                        for(int i = 1; i <= 8; i++) {
+                            bindExpense(i, valueDiv);
+                            ExpenseBussinessService.save(expense);
+                        }
+                    }
+
+                    //9 meses
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 8x")) {
+                        Double valueDiv = value/9;
+                        for(int i = 1; i <= 9; i++) {
+                            bindExpense(i, valueDiv);
+                            ExpenseBussinessService.save(expense);
+                        }
+                    }
+
+                    //10 meses
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 9x")) {
+                        Double valueDiv = value/10;
+                        for(int i = 1; i <= 10; i++) {
+                            bindExpense(i, valueDiv);
+                            ExpenseBussinessService.save(expense);
+                        }
+                    }
+
+                    //11 meses
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 10x")) {
+                        Double valueDiv = value/11;
+                        for(int i = 1; i <= 11; i++) {
+                            bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //12 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Nos próximos 12 meses")) {
-                        for(int i = 1; i <= 12
-                                ; i++) {
-                            bindExpense(i);
+                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 11x")) {
+                        Double valueDiv = value/12;
+                        for(int i = 1; i <= 12; i++) {
+                            bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
@@ -147,9 +224,9 @@ public class NewExpenseActivity extends AppCompatActivity{
         });
     }
 
-    private void bindExpense(Integer month) {
+    private void bindExpense(Integer month, Double value) {
         expense.setDescription(editTextDescription.getText().toString());
-        expense.setValue(Double.parseDouble(editTextValue.getText().toString()));
+        expense.setValue(value);
         expense.setType(spinnerType.getSelectedItem().toString());
         expense.setForm(spinnerForm.getSelectedItem().toString());
 
@@ -158,7 +235,6 @@ public class NewExpenseActivity extends AppCompatActivity{
         dataCal.setTime(date);
 
         expense.setMonth(dataCal.get(Calendar.MONTH) + month);
-
 
         int op = radioGroup.getCheckedRadioButtonId();
 
