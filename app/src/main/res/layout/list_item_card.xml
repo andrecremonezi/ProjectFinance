@@ -17,7 +17,7 @@
             android:textSize="20sp"
             android:textColor="@color/primaryColor"
             android:id="@+id/textViewCardName"
-            android:text="Name Card"
+            android:text="@string/card_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -31,7 +31,6 @@
 
         <TextView
             android:id="@+id/textViewCardLimitValue"
-            android:text="00.00"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="90dp"

@@ -22,32 +22,32 @@
 
     <EditText
         android:id="@+id/editTextNewFirstName"
-        android:hint="First Name"
+        android:hint="@string/first_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/editTextLastName"
-        android:hint="Last Name"
+        android:hint="@string/last_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/editTextNewUser"
-        android:hint="User Name"
+        android:hint="@string/user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/editTextNewPassWord"
-        android:hint="Password"
+        android:hint="@string/password"
         android:password="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/buttonCreateUser"
-        android:text="Create"
+        android:text="@string/create"
         android:layout_gravity="end"
         android:textColor="@color/textColorPrimary"
         android:background="?attr/colorPrimary"

@@ -60,9 +60,9 @@ public class Goal implements Parcelable{
 
         Goal goal = (Goal) o;
 
-        if (id != null ? !id.equals(goal.id) : goal.id != null) return false;
-        if (value != null ? !value.equals(goal.value) : goal.value != null) return false;
-        return !(type != null ? !type.equals(goal.type) : goal.type != null);
+        return !(id != null ? !id.equals(goal.id) : goal.id != null) &&
+                !(value != null ? !value.equals(goal.value) : goal.value != null) &&
+                !(type != null ? !type.equals(goal.type) : goal.type != null);
 
     }
 

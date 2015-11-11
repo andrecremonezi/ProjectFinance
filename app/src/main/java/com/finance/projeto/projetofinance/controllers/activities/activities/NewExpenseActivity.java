@@ -30,8 +30,6 @@ public class NewExpenseActivity extends AppCompatActivity{
     private Spinner spinnerForm;
     private Spinner spinnerMonth;
     private Expense expense;
-    private Button buttonSave;
-    private Toolbar toolbar;
     private RadioGroup radioGroup;
     public static final String PARAM_TASK = "PARAM_TASK";
 
@@ -59,7 +57,7 @@ public class NewExpenseActivity extends AppCompatActivity{
     }
 
     private void bindToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_newExpense);
 
         setSupportActionBar(toolbar);
@@ -90,7 +88,7 @@ public class NewExpenseActivity extends AppCompatActivity{
     }
 
     private void bindButtonSave() {
-        buttonSave = (Button) findViewById(R.id.buttonAddExpense);
+        Button buttonSave = (Button) findViewById(R.id.buttonAddExpense);
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,25 +99,25 @@ public class NewExpenseActivity extends AppCompatActivity{
                 if (!FormHelper.validateRequired(requiredMessage, editTextDescription, editTextValue)) {
 
                     //1 mes
-                    if(spinnerMonth.getSelectedItem().toString().equals("Apenas este mês")) {
-                        for(int i = 1; i <= 1; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Apenas este mês")) {
+                        for (int i = 1; i <= 1; i++) {
                             bindExpense(i, value);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //prox mes
-                    if(spinnerMonth.getSelectedItem().toString().equals("Apenas próximo mês")) {
-                        for(int i = 2; i <= 2; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Apenas próximo mês")) {
+                        for (int i = 2; i <= 2; i++) {
                             bindExpense(i, value);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //2 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 1x")) {
-                        Double valueDiv = value/2;
-                        for(int i = 1; i <= 2; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 1x")) {
+                        Double valueDiv = value / 2;
+                        for (int i = 1; i <= 2; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
@@ -127,90 +125,90 @@ public class NewExpenseActivity extends AppCompatActivity{
 
 
                     //3 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 2x")) {
-                        Double valueDiv = value/3;
-                        for(int i = 1; i <= 3; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 2x")) {
+                        Double valueDiv = value / 3;
+                        for (int i = 1; i <= 3; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //4 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 3x")) {
-                        Double valueDiv = value/4;
-                        for(int i = 1; i <= 4; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 3x")) {
+                        Double valueDiv = value / 4;
+                        for (int i = 1; i <= 4; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //5 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 4x")) {
-                        Double valueDiv = value/5;
-                        for(int i = 1; i <= 5; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 4x")) {
+                        Double valueDiv = value / 5;
+                        for (int i = 1; i <= 5; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //6 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 5x")) {
-                        Double valueDiv = value/6;
-                        for(int i = 1; i <= 6; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 5x")) {
+                        Double valueDiv = value / 6;
+                        for (int i = 1; i <= 6; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //7 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 6x")) {
-                        Double valueDiv = value/7;
-                        for(int i = 1; i <= 7; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 6x")) {
+                        Double valueDiv = value / 7;
+                        for (int i = 1; i <= 7; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //8 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 7x")) {
-                        Double valueDiv = value/8;
-                        for(int i = 1; i <= 8; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 7x")) {
+                        Double valueDiv = value / 8;
+                        for (int i = 1; i <= 8; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //9 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 8x")) {
-                        Double valueDiv = value/9;
-                        for(int i = 1; i <= 9; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 8x")) {
+                        Double valueDiv = value / 9;
+                        for (int i = 1; i <= 9; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //10 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 9x")) {
-                        Double valueDiv = value/10;
-                        for(int i = 1; i <= 10; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 9x")) {
+                        Double valueDiv = value / 10;
+                        for (int i = 1; i <= 10; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //11 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 10x")) {
-                        Double valueDiv = value/11;
-                        for(int i = 1; i <= 11; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 10x")) {
+                        Double valueDiv = value / 11;
+                        for (int i = 1; i <= 11; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
                     }
 
                     //12 meses
-                    if(spinnerMonth.getSelectedItem().toString().equals("Este mês + 11x")) {
-                        Double valueDiv = value/12;
-                        for(int i = 1; i <= 12; i++) {
+                    if (spinnerMonth.getSelectedItem().toString().equals("Este mês + 11x")) {
+                        Double valueDiv = value / 12;
+                        for (int i = 1; i <= 12; i++) {
                             bindExpense(i, valueDiv);
                             ExpenseBussinessService.save(expense);
                         }
@@ -246,7 +244,7 @@ public class NewExpenseActivity extends AppCompatActivity{
 
     private void bindFields() {
         editTextDescription = (EditText) findViewById(R.id.editTextNewDescriptionExpense);
-        editTextDescription.setText(this.expense.getDescription() == null ? "" : this.expense.getDescription().toString());
+        editTextDescription.setText(this.expense.getDescription() == null ? "" : this.expense.getDescription());
 
         editTextValue = (EditText) findViewById(R.id.editTextNewValueExpense);
         editTextValue.setText(this.expense.getValue() == null ? "" : this.expense.getValue().toString());
@@ -255,7 +253,7 @@ public class NewExpenseActivity extends AppCompatActivity{
     }
 
     public void bindSpinnerMonth(){
-        ArrayAdapter<String> adapterMonth = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, months);
+        ArrayAdapter<String> adapterMonth = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, months);
         adapterMonth.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMonth = (Spinner)  findViewById(R.id.spinnerNewMonthExpense);
         spinnerMonth.setAdapter(adapterMonth);
@@ -266,7 +264,7 @@ public class NewExpenseActivity extends AppCompatActivity{
     }
 
     public void bindSpinnerForm(){
-        ArrayAdapter<String> adapterForm = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, forms);
+        ArrayAdapter<String> adapterForm = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, forms);
         adapterForm.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerForm = (Spinner)  findViewById(R.id.spinnerNewFormExpense);
         spinnerForm.setAdapter(adapterForm);
@@ -276,7 +274,7 @@ public class NewExpenseActivity extends AppCompatActivity{
     }
 
     public void bindSpinnerTypeCategory(){
-        ArrayAdapter<String> adapterCategory = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, typeCategory);
+        ArrayAdapter<String> adapterCategory = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, typeCategory);
         adapterCategory.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerType = (Spinner) findViewById(R.id.spinnerNewTypeExpense);
         spinnerType.setAdapter(adapterCategory);

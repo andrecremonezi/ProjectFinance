@@ -31,7 +31,7 @@
     <string name="label_listReceipe">Lista de receitas</string>
     <string name="label_listGoal">Lista de metas</string>
     <string name="label_listExpense">Lista de depesas</string>
-    <string name="Category">Categoria</string>
+    <string name="Category">Categoria: </string>
     <string name="Installments">Parcelas</string>
     <string name="save">Salvar</string>
     <string name="nameItem">Nome do item</string>

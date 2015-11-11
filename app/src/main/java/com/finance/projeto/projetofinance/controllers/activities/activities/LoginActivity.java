@@ -17,10 +17,6 @@ import com.finance.projeto.projetofinance.model.persistence.UserRepository;
 public class LoginActivity extends AppCompatActivity {
     private EditText editTextLogin;
     private EditText editTextPassword;
-    private Button buttonLogin;
-    private Button buttonNewUser;
-    private User user;
-    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +36,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void bindToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_login);
     }
 
     private void bindButtonLogin() {
-        buttonLogin = (Button) findViewById(R.id.buttonLogin);
+        Button buttonLogin = (Button) findViewById(R.id.buttonLogin);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,16 +63,13 @@ public class LoginActivity extends AppCompatActivity {
         checkUser.setUserName(editTextLogin.getText().toString());
         checkUser.setPassword(editTextPassword.getText().toString());
 
-        user = UserRepository.checkLogin(checkUser);
+        User user = UserRepository.checkLogin(checkUser);
 
-        if(user != null)
-            return true;
-        else
-            return false;
+        return user != null;
     }
 
     private void bindButtonNewUser() {
-        buttonNewUser = (Button) findViewById(R.id.buttonNewUser);
+        Button buttonNewUser = (Button) findViewById(R.id.buttonNewUser);
 
         buttonNewUser.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -75,7 +75,7 @@
                             android:gravity="center"
                             android:layout_below="@+id/textViewLabelResume"
                             android:textColor="@color/colorText"
-                            android:text="Current Balance R$ 00.00"
+                            android:text="@string/current_balance"
                             android:textSize="15sp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
@@ -85,7 +85,7 @@
                             android:gravity="center"
                             android:layout_below="@+id/textViewCurrentBalance"
                             android:textColor="@color/colorText"
-                            android:text="Bank R$ 00.00"
+                            android:text="@string/bank"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -94,7 +94,7 @@
                             android:gravity="center"
                             android:layout_below="@+id/textViewBankBalance"
                             android:textColor="@color/colorText"
-                            android:text="Wallet R$ 00.00"
+                            android:text="@string/wallet"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -103,7 +103,7 @@
                             android:text="@string/value_next_month"
                             android:gravity="center"
                             android:layout_below="@+id/textViewWalletBalance"
-                            android:textSize="15dp"
+                            android:textSize="15sp"
                             android:textColor="#E57373"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
@@ -133,7 +133,7 @@
 
                         <TextView
                             android:id="@+id/textViewNameCard"
-                            android:text="Nome do Cartão"
+                            android:text="@string/name_card"
                             android:layout_gravity="center"
                             android:textColor="@color/colorText"
                             android:layout_width="wrap_content"
@@ -141,7 +141,7 @@
 
                         <TextView
                             android:id="@+id/textViewAmountSpent"
-                            android:text="Valor gasto"
+                            android:text="@string/value_espent"
                             android:textColor="@color/colorText"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
@@ -149,7 +149,7 @@
 
                         <TextView
                             android:id="@+id/textViewLimitValue"
-                            android:text="R$ 00.00"
+                            android:text="@string/value_rs"
                             android:textColor="@color/colorText"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
@@ -202,7 +202,7 @@
                         <TextView
                             android:id="@+id/textViewTotalReceipeValueTotal"
                             android:layout_width="match_parent"
-                            android:text="Teste"
+                            android:text="@string/test"
                             android:textColor="@color/colorText"
                             android:gravity="center"
                             android:layout_below="@+id/titleCard"
@@ -211,7 +211,7 @@
                         <TextView
                             android:id="@+id/textViewTotalExpenseValueTotal"
                             android:layout_width="match_parent"
-                            android:text="Teste 2"
+                            android:text="@string/test2"
                             android:textColor="@color/colorText"
                             android:gravity="center"
                             android:layout_below="@+id/textViewTotalReceipeValueTotal"

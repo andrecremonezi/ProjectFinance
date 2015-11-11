@@ -23,9 +23,6 @@ public class GoalDetailActivity extends AppCompatActivity{
     private TextView textViewDetailName;
     private TextView textViewDetailValue;
     private Goal goal;
-    private Toolbar toolbar;
-    private Button buttonEditar;
-    private Button   buttonDeletar;
     DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
@@ -64,7 +61,7 @@ public class GoalDetailActivity extends AppCompatActivity{
     }
 
     public void bindToolbar(){
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_item);
 
         setSupportActionBar(toolbar);
@@ -80,7 +77,7 @@ public class GoalDetailActivity extends AppCompatActivity{
     }
 
     private void bindData() {
-        textViewDetailName.setText(goal.getType().toString());
+        textViewDetailName.setText(goal.getType());
         textViewDetailValue.setText(df.format(goal.getValue()));
     }
 
@@ -90,7 +87,7 @@ public class GoalDetailActivity extends AppCompatActivity{
     }
 
     public void bindButtonDelete(){
-        buttonDeletar = (Button) findViewById(R.id.buttonDeleteItemGoal);
+        Button buttonDeletar = (Button) findViewById(R.id.buttonDeleteItemGoal);
         buttonDeletar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,7 +116,7 @@ public class GoalDetailActivity extends AppCompatActivity{
     }
 
     public void bindButtonEdit(){
-        buttonEditar = (Button) findViewById(R.id.buttonEditItemGoal);
+        Button buttonEditar = (Button) findViewById(R.id.buttonEditItemGoal);
 
         buttonEditar.setOnClickListener(new View.OnClickListener() {
             @Override

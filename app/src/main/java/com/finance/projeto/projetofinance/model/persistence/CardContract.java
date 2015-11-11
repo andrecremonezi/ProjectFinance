@@ -2,15 +2,11 @@ package com.finance.projeto.projetofinance.model.persistence;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-
 import com.finance.projeto.projetofinance.model.entities.Card;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Andrea on 13/10/2015.
- */
+
 public class CardContract {
     public static final String TABLE      = "card";
     public static final String ID         = "id";
@@ -24,15 +20,8 @@ public class CardContract {
     }
 
     public static String getCreateTableScript(){
-        final StringBuilder create = new StringBuilder();
-        create.append(" CREATE TABLE " + TABLE);
-        create.append(" ( ");
-        create.append(ID + " INTEGER PRIMARY KEY, ");
-        create.append(NAME + " TEXT, ");
-        create.append(LIMITVALUE + " FLOAT NOT NULL ");
-        create.append(" ); ");
 
-        return create.toString();
+        return (" CREATE TABLE " + TABLE) + " ( " + ID + " INTEGER PRIMARY KEY, " + NAME + " TEXT, " + LIMITVALUE + " FLOAT NOT NULL " + " ); ";
     }
 
     public static ContentValues getContentValues(Card card) {
@@ -60,7 +49,6 @@ public class CardContract {
     }
 
     public static List<Card> getCards(Cursor cursor) {
-        Card card = new Card();
         List<Card> cards = new ArrayList<>();
 
         while (cursor.moveToNext()) {

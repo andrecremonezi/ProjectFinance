@@ -33,15 +33,15 @@
 
             <TextView
                 android:id="@+id/textViewTitleDetail"
-                android:text="Detalhes do cartão"
+                android:text="@string/card_detail"
                 android:textColor="@color/primaryColor"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/textViewDetailLabelNameCard"
-                android:text="Nome do cartão: "
+                android:text="@string/card_name_label"
                 android:layout_below="@+id/textViewTitleDetail"
                 android:textColor="@color/colorText"
                 android:layout_margin="3dp"
@@ -51,7 +51,6 @@
 
             <TextView
                 android:id="@+id/textViewDetailNameCard"
-                android:text="Visa"
                 android:layout_below="@+id/textViewTitleDetail"
                 android:layout_margin="3dp"
                 android:layout_toRightOf="@+id/textViewDetailLabelNameCard"
@@ -60,7 +59,7 @@
 
             <TextView
                 android:id="@+id/textViewDetailLabelValueCard"
-                android:text="Valor R$: "
+                android:text="@string/value_rs_rs"
                 android:textColor="@color/colorText"
                 android:layout_margin="3dp"
                 android:layout_below="@+id/textViewDetailLabelNameCard"
@@ -69,10 +68,9 @@
 
             <TextView
                 android:id="@+id/textViewDetailValueCard"
-                android:text="00.00"
                 android:layout_margin="3dp"
-                android:layout_below="@+id/textViewDetailLabelNameCard"
                 android:layout_toRightOf="@+id/textViewDetailLabelValueCard"
+                android:layout_below="@+id/textViewDetailLabelNameCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -82,9 +80,9 @@
                 style="?android:attr/borderlessButtonStyle"
                 android:textColor="@color/primaryColor"
                 android:layout_width="wrap_content"
+                android:layout_toLeftOf="@+id/buttonDeleteItemCard"
                 android:layout_height="wrap_content"
                 android:text="@string/lbl_edit"
-                android:layout_toLeftOf="@+id/buttonDeleteItemCard"
                 android:layout_below="@+id/textViewDetailValueCard" />
 
             <Button

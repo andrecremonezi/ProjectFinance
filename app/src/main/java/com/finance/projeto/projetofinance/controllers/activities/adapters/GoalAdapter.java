@@ -46,12 +46,12 @@ public class GoalAdapter extends BaseAdapter {
         View goalListView = context.getLayoutInflater().inflate(R.layout.list_item_goal, parent, false);
 
         TextView textViewCategory = (TextView) goalListView.findViewById(R.id.textViewGoalCategory);
-        textViewCategory.setText(goal.getType().toString());
+        textViewCategory.setText(goal.getType());
 
         TextView textViewValueTotal = (TextView) goalListView.findViewById(R.id.textViewGoalTotalValue);
         textViewValueTotal.setText(df.format(goal.getValue()));
 
-        Double amountEspent = ExpenseBussinessService.amountSpentThisMonth(goal.getType().toString());
+        Double amountEspent = ExpenseBussinessService.amountSpentThisMonth(goal.getType());
         TextView textViewValueCurrent = (TextView) goalListView.findViewById(R.id.textViewGoalCurrentValue);
         textViewValueCurrent.setText(df.format(amountEspent));
 

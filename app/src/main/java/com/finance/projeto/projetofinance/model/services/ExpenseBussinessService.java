@@ -2,7 +2,6 @@ package com.finance.projeto.projetofinance.model.services;
 
 import com.finance.projeto.projetofinance.model.entities.Expense;
 import com.finance.projeto.projetofinance.model.persistence.ExpenseRepository;
-
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -61,7 +60,7 @@ public class ExpenseBussinessService {
         Double sum = 0.0;
 
         for (Expense ex : expences) {
-           if(ex.getForm().toString().equals("Banco") && ex.getMonth().toString().equals(month))
+           if(ex.getForm().equals("Banco") && ex.getMonth().toString().equals(month))
              sum += ex.getValue();
         }
 
@@ -74,7 +73,7 @@ public class ExpenseBussinessService {
         Double sum = 0.0;
 
         for (Expense ex : expences) {
-            if(ex.getForm().toString().equals("Carteira") && ex.getMonth().toString().equals(month))
+            if(ex.getForm().equals("Carteira") && ex.getMonth().toString().equals(month))
               sum += ex.getValue();
         }
 
@@ -89,7 +88,7 @@ public class ExpenseBussinessService {
         Double sumAmountSpent = 0.0;
 
         for(Expense ex : expenses){
-            if(ex.getType().toString().equals(type) && ex.getMonth().toString().equals(month)){
+            if(ex.getType().equals(type) && ex.getMonth().toString().equals(month)){
                 sumAmountSpent += ex.getValue();
             }
         }
@@ -130,61 +129,8 @@ public class ExpenseBussinessService {
         return sum;
     }
 
-    public static Double sumValuesBankNextMonth() {
-        String month = String.valueOf(nextMonth());
-        List<Expense> expences = ExpenseBussinessService.findAll();
-
-        Double sum = 0.0;
-
-        for (Expense ex : expences) {
-            if(ex.getForm().toString().equals("Banco") && ex.getMonth().toString().equals(month))
-                sum += ex.getValue();
-        }
-
-        return sum;
-    }
-
-    public static Double sumValuesWalletNextMonth() {
-        String month = String.valueOf(nextMonth());
-        List<Expense> expences = ExpenseBussinessService.findAll();
-        Double sum = 0.0;
-
-        for (Expense ex : expences) {
-            if(ex.getForm().toString().equals("Carteira") && ex.getMonth().toString().equals(month))
-                sum += ex.getValue();
-        }
-
-        return sum;
-    }
-
-
-    public static Double amountSpentNextMonth(String type){
-        String month = String.valueOf(nextMonth());
-
-        List<Expense> expenses = ExpenseBussinessService.findAll();
-        Double sumAmountSpent = 0.0;
-
-        for(Expense ex : expenses){
-            if(ex.getType().toString().equals(type) && ex.getMonth().toString().equals(month)){
-                sumAmountSpent += ex.getValue();
-            }
-        }
-        return sumAmountSpent;
-    }
-
-
-
-
 
     //Proximos meses
-
-    public static int nextsMonths(){
-        Date date = new Date();
-        GregorianCalendar dataCal = new GregorianCalendar();
-        dataCal.setTime(date);
-
-        return dataCal.get(Calendar.MONTH) + 3;
-    }
 
     public static Double sumValuesNextsMonths() {
         String nextsMonths = String.valueOf(nextMonth());

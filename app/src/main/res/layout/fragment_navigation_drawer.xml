@@ -18,7 +18,8 @@
         android:id="@+id/imageDrawer"
         android:src="@drawable/ic_abstract"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image" />
 
     </LinearLayout>
 

@@ -3,15 +3,10 @@ package com.finance.projeto.projetofinance.model.persistence;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
 import com.finance.projeto.projetofinance.model.entities.Goal;
-import com.finance.projeto.projetofinance.model.entities.Receipe;
-
 import java.util.List;
 
-/**
- * Created by Andrea on 11/10/2015.
- */
+
 public class GoalRepository {
 
     private GoalRepository()

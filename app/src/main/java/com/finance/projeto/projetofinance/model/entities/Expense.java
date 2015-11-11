@@ -85,14 +85,13 @@ public class Expense implements Parcelable{
 
         Expense expense = (Expense) o;
 
-        if (id != null ? !id.equals(expense.id) : expense.id != null) return false;
-        if (description != null ? !description.equals(expense.description) : expense.description != null)
-            return false;
-        if (value != null ? !value.equals(expense.value) : expense.value != null) return false;
-        if (type != null ? !type.equals(expense.type) : expense.type != null) return false;
-        if (month != null ? !month.equals(expense.month) : expense.month != null) return false;
-        if (form != null ? !form.equals(expense.form) : expense.form != null) return false;
-        return !(paid != null ? !paid.equals(expense.paid) : expense.paid != null);
+        return !(id != null ? !id.equals(expense.id) : expense.id != null) &&
+                !(description != null ? !description.equals(expense.description) : expense.description != null) &&
+                !(value != null ? !value.equals(expense.value) : expense.value != null) &&
+                !(type != null ? !type.equals(expense.type) : expense.type != null) &&
+                !(month != null ? !month.equals(expense.month) : expense.month != null) &&
+                !(form != null ? !form.equals(expense.form) : expense.form != null) &&
+                !(paid != null ? !paid.equals(expense.paid) : expense.paid != null);
 
     }
 

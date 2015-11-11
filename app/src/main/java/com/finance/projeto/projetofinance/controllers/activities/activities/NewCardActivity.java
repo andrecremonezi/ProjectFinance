@@ -18,8 +18,6 @@ public class NewCardActivity extends AppCompatActivity {
     private Card card;
     private EditText editTextCardName;
     private EditText editTextCardLimitValue;
-    private Button buttonSave;
-    private Toolbar toolbar;
     public static final String PARAM_TASK = "PARAM_TASK";
 
     public NewCardActivity(){
@@ -43,7 +41,7 @@ public class NewCardActivity extends AppCompatActivity {
     }
 
     private void bindToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_newCard);
 
         setSupportActionBar(toolbar);
@@ -59,10 +57,11 @@ public class NewCardActivity extends AppCompatActivity {
     }
 
     private void initCard() {
-        Bundle extras = getIntent().getExtras();
+        Bundle extras;
+        extras = getIntent().getExtras();
 
         if(extras != null){
-            this.card = (Card) extras.getParcelable(PARAM_TASK);
+            this.card = extras.getParcelable(PARAM_TASK);
         }
         this.card = this.card == null ? new Card() : this.card;
     }
@@ -73,7 +72,7 @@ public class NewCardActivity extends AppCompatActivity {
     }
 
     private void bindButtonSave() {
-        buttonSave = (Button) findViewById(R.id.buttonAddCard);
+        Button buttonSave = (Button) findViewById(R.id.buttonAddCard);
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +96,7 @@ public class NewCardActivity extends AppCompatActivity {
 
     private void bindFields() {
         editTextCardName = (EditText) findViewById(R.id.textViewNameNewCard);
-        editTextCardName.setText(this.card.getName() == null ? "" : this.card.getName().toString());
+        editTextCardName.setText(this.card.getName() == null ? "" : this.card.getName());
 
         editTextCardLimitValue = (EditText)  findViewById(R.id.editTextCardLimitValue);
         editTextCardLimitValue.setText(this.card.getLimitValue() == null ? "" : this.card.getLimitValue().toString());

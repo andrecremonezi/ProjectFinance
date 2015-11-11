@@ -6,15 +6,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/textViewLabel"
             android:layout_width="45dp"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:background="@drawable/frame"
             android:layout_height="45dp"
             android:gravity="center"
@@ -22,10 +19,9 @@
 
         <TextView
             android:id="@+id/textViewReceipeDescription"
-            android:text="Description"
-            android:textSize="15dp"
+            android:text="@string/description"
+            android:textSize="15sp"
             android:textColor="@color/colorText"
-            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/textViewLabel"
@@ -34,9 +30,8 @@
 
         <TextView
             android:id="@+id/textViewReceipeCategory"
-            android:text="Category"
-            android:textSize="15dp"
-            android:layout_weight="1"
+            android:text="@string/category"
+            android:textSize="15sp"
             android:textColor="@color/categoryLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,10 +42,9 @@
 
         <TextView
             android:id="@+id/textViewReceipeValue"
-            android:text="Value"
+            android:text="@string/value"
             android:textColor="@color/primaryColor"
-            android:textSize="15dp"
-            android:layout_weight="1"
+            android:textSize="15sp"
             android:gravity="right"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="2dp"
@@ -63,7 +57,7 @@
         <TextView
             android:id="@+id/textViewReceipeForm"
             android:layout_width="wrap_content"
-            android:text="Form"
+            android:text="@string/method"
             android:textColor="@color/categoryLabel"
             android:layout_marginTop="2dp"
             android:layout_height="wrap_content"

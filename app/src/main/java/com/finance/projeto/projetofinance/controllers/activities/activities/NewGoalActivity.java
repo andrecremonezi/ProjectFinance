@@ -21,8 +21,6 @@ public class NewGoalActivity extends AppCompatActivity {
     private Spinner spinnerType;
     private Goal goal;
     private EditText editTextValue;
-    private Button buttonSave;
-    private Toolbar toolbar;
     public static final String PARAM_TASK = "PARAM_TASK";
 
     public NewGoalActivity(){
@@ -47,7 +45,7 @@ public class NewGoalActivity extends AppCompatActivity {
     }
 
     private void bindToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_newGoal);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -64,7 +62,7 @@ public class NewGoalActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
 
         if(extras != null){
-            this.goal = (Goal) extras.getParcelable(PARAM_TASK);
+            this.goal = extras.getParcelable(PARAM_TASK);
         }
         this.goal = this.goal == null ? new Goal() : this.goal;
     }
@@ -75,7 +73,7 @@ public class NewGoalActivity extends AppCompatActivity {
     }
 
     private void bindButtonSave() {
-        buttonSave = (Button) findViewById(R.id.buttonAddGoal);
+        Button buttonSave = (Button) findViewById(R.id.buttonAddGoal);
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,7 +103,7 @@ public class NewGoalActivity extends AppCompatActivity {
 
     public void bindSpinnerTypeCategory(){
         spinnerType   = (Spinner)  findViewById(R.id.spinnerCategoryGoal);
-        ArrayAdapter<String> adapterCategory = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, typeCategory);
+        ArrayAdapter<String> adapterCategory = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, typeCategory);
         adapterCategory.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerType = (Spinner) findViewById(R.id.spinnerCategoryGoal);
         spinnerType.setAdapter(adapterCategory);

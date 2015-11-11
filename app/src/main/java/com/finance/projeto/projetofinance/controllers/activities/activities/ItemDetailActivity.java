@@ -25,9 +25,6 @@ public class ItemDetailActivity extends AppCompatActivity {
     private TextView textViewDetailMonth;
     private TextView textViewPaid;
     private Expense  expense;
-    private Toolbar  toolbar;
-    private Button   buttonEditar;
-    private Button   buttonDeletar;
     DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
@@ -65,7 +62,7 @@ public class ItemDetailActivity extends AppCompatActivity {
     }
 
     public void bindToolbar(){
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_item);
 
         setSupportActionBar(toolbar);
@@ -111,7 +108,7 @@ public class ItemDetailActivity extends AppCompatActivity {
         if(expense.getMonth().toString().equals("12"))
             textViewDetailMonth.setText("Dezembro");
 
-        int colorPaid = 0;
+        int colorPaid;
         if(expense.getPaid().toString().equals("1")) {
             colorPaid = android.graphics.Color.parseColor("#4CAF50");
             textViewPaid.setText("Pago");
@@ -134,7 +131,7 @@ public class ItemDetailActivity extends AppCompatActivity {
     }
 
     public void bindButtonDelete(){
-        buttonDeletar = (Button) findViewById(R.id.buttonDeleteItem);
+        Button buttonDeletar = (Button) findViewById(R.id.buttonDeleteItem);
         buttonDeletar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,7 +160,7 @@ public class ItemDetailActivity extends AppCompatActivity {
      }
 
     public void bindButtonEdit(){
-        buttonEditar = (Button) findViewById(R.id.buttonEditItem);
+        Button buttonEditar = (Button) findViewById(R.id.buttonEditItem);
 
         buttonEditar.setOnClickListener(new View.OnClickListener() {
             @Override

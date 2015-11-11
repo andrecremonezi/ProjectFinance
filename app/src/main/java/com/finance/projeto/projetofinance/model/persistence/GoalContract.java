@@ -6,9 +6,6 @@ import com.finance.projeto.projetofinance.model.entities.Goal;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Andrea on 11/10/2015.
- */
 public class GoalContract {
 
     public static final String TABLE        = "goal";
@@ -23,15 +20,8 @@ public class GoalContract {
     }
 
     public static String getCreateTableScript(){
-        final StringBuilder create = new StringBuilder();
-        create.append(" CREATE TABLE " + TABLE);
-        create.append(" ( ");
-        create.append(ID + " INTEGER PRIMARY KEY, ");
-        create.append(VALUE + " FLOAT NOT NULL, ");
-        create.append(TYPE + " TEXT ");
-        create.append(" ); ");
 
-        return create.toString();
+        return (" CREATE TABLE " + TABLE) + " ( " + ID + " INTEGER PRIMARY KEY, " + VALUE + " FLOAT NOT NULL, " + TYPE + " TEXT " + " ); ";
     }
 
     public static ContentValues getContentValues(Goal goal) {
@@ -59,7 +49,6 @@ public class GoalContract {
     }
 
     public static List<Goal> getGoals(Cursor cursor) {
-        Goal goal = new Goal();
         List<Goal> goals = new ArrayList<>();
 
         while (cursor.moveToNext()) {

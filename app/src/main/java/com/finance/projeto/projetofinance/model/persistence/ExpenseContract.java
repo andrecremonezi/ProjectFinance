@@ -26,20 +26,8 @@ public class ExpenseContract {
     }
 
     public static String getCreateTableScript(){
-        final StringBuilder create = new StringBuilder();
-        create.append(" CREATE TABLE " + TABLE);
-        create.append(" ( ");
-        create.append(ID + " INTEGER PRIMARY KEY, ");
-        create.append(DESCRIPTION + " TEXT NOT NULL, ");
-        create.append(VALUE + " FLOAT NOT NULL, ");
-        create.append(TYPE + " TEXT, ");
-        create.append(FORM + " TEXT, ");
-        create.append(MONTH + " TEXT, ");
-        create.append(DATE + " DATETIME DEFAULT CURRENT_DATE, ");
-        create.append(PAID + " INTEGER DEFAULT 0 ");
-        create.append(" ); ");
 
-        return create.toString();
+        return (" CREATE TABLE " + TABLE) + " ( " + ID + " INTEGER PRIMARY KEY, " + DESCRIPTION + " TEXT NOT NULL, " + VALUE + " FLOAT NOT NULL, " + TYPE + " TEXT, " + FORM + " TEXT, " + MONTH + " TEXT, " + DATE + " DATETIME DEFAULT CURRENT_DATE, " + PAID + " INTEGER DEFAULT 0 " + " ); ";
     }
 
     public static ContentValues getContentValues(Expense expense) {

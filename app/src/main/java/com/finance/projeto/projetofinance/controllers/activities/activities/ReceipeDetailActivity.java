@@ -26,9 +26,6 @@ public class ReceipeDetailActivity extends AppCompatActivity{
     private TextView textViewDetailForm;
     private TextView textViewDetailMonth;
     private Receipe receipe;
-    private Toolbar toolbar;
-    private Button buttonEditar;
-    private Button   buttonDeletar;
     DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
@@ -66,7 +63,7 @@ public class ReceipeDetailActivity extends AppCompatActivity{
     }
 
     public void bindToolbar(){
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_item);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -120,7 +117,7 @@ public class ReceipeDetailActivity extends AppCompatActivity{
     }
 
     public void bindButtonDelete(){
-        buttonDeletar = (Button) findViewById(R.id.buttonDeleteItemReceipe);
+        Button buttonDeletar = (Button) findViewById(R.id.buttonDeleteItemReceipe);
         buttonDeletar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,7 +146,7 @@ public class ReceipeDetailActivity extends AppCompatActivity{
     }
 
     public void bindButtonEdit(){
-        buttonEditar = (Button) findViewById(R.id.buttonEditItemReceipe);
+        Button buttonEditar = (Button) findViewById(R.id.buttonEditItemReceipe);
         buttonEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

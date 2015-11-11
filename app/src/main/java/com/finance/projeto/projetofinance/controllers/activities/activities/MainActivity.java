@@ -1,16 +1,10 @@
 package com.finance.projeto.projetofinance.controllers.activities.activities;
 
-import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.TextView;
-
 import com.daimajia.numberprogressbar.NumberProgressBar;
 import com.finance.projeto.projetofinance.R;
 import com.finance.projeto.projetofinance.model.entities.Card;
@@ -34,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewExpenseValue;
     private TextView textViewReceipeValue;
     private TextView textViewExpenseCumulative;
-    private NavigationDrawerFragment drawerFragment;
     DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
@@ -49,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void bindDrawer() {
-        drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_drawer_navigation);
-        drawerFragment.setUp(R.id.fragment_drawer_navigation, (DrawerLayout) findViewById(R.id.drawer_layout),toolbar);
+        NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_drawer_navigation);
+        drawerFragment.setUp(R.id.fragment_drawer_navigation, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
     }
 
     @Override

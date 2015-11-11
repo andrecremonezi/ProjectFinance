@@ -43,7 +43,7 @@ public class CardAdapter extends BaseAdapter{
         View cardListView = context.getLayoutInflater().inflate(R.layout.list_item_card, parent, false);
 
         TextView textViewCardName = (TextView) cardListView.findViewById(R.id.textViewCardName);
-        textViewCardName.setText(card.getName().toString());
+        textViewCardName.setText(card.getName());
 
         TextView textViewCardLimitValue = (TextView) cardListView.findViewById(R.id.textViewCardLimitValue);
         textViewCardLimitValue.setText(df.format(card.getLimitValue()));

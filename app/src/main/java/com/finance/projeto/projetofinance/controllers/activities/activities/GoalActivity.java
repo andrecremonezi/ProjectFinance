@@ -25,8 +25,6 @@ public class GoalActivity extends AppCompatActivity {
     public static final String DETAIL_GOAL = "DETAIL_GOAL";
     private ListView listViewGoal;
     private Goal selectedGoal;
-    private FloatingActionButton buttonNewGoal;
-    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +42,7 @@ public class GoalActivity extends AppCompatActivity {
     }
 
     public void bindToolbar(){
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_goal);
 
         setSupportActionBar(toolbar);
@@ -60,7 +58,7 @@ public class GoalActivity extends AppCompatActivity {
     }
 
     private void bindButtonNewGoal() {
-        buttonNewGoal = (FloatingActionButton) findViewById(R.id.buttonNewGoal);
+        FloatingActionButton buttonNewGoal = (FloatingActionButton) findViewById(R.id.buttonNewGoal);
         buttonNewGoal.attachToListView(listViewGoal);
 
         buttonNewGoal.setOnClickListener(new View.OnClickListener() {

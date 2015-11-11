@@ -61,11 +61,10 @@ public class User implements Parcelable {
 
         User user1 = (User) o;
 
-        if (!id.equals(user1.id)) return false;
-        if (!userName.equals(user1.userName)) return false;
-        if (!password.equals(user1.password)) return false;
-        if (!firstName.equals(user1.firstName)) return false;
-        return lastName.equals(user1.lastName);
+        return id.equals(user1.id) && userName.equals(user1.userName) &&
+                password.equals(user1.password) &&
+                firstName.equals(user1.firstName) &&
+                lastName.equals(user1.lastName);
     }
 
     @Override

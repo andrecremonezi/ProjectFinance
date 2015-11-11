@@ -75,14 +75,12 @@ public class Receipe implements Parcelable{
 
         Receipe receipe = (Receipe) o;
 
-        if (id != null ? !id.equals(receipe.id) : receipe.id != null) return false;
-        if (description != null ? !description.equals(receipe.description) : receipe.description != null)
-            return false;
-        if (value != null ? !value.equals(receipe.value) : receipe.value != null) return false;
-        if (type != null ? !type.equals(receipe.type) : receipe.type != null) return false;
-        if (walletOrBank != null ? !walletOrBank.equals(receipe.walletOrBank) : receipe.walletOrBank != null)
-            return false;
-        return !(month != null ? !month.equals(receipe.month) : receipe.month != null);
+        return !(id != null ? !id.equals(receipe.id) : receipe.id != null) &&
+                !(description != null ? !description.equals(receipe.description) : receipe.description != null) &&
+                !(value != null ? !value.equals(receipe.value) : receipe.value != null) &&
+                !(type != null ? !type.equals(receipe.type) : receipe.type != null) &&
+                !(walletOrBank != null ? !walletOrBank.equals(receipe.walletOrBank) : receipe.walletOrBank != null) &&
+                !(month != null ? !month.equals(receipe.month) : receipe.month != null);
 
     }
 

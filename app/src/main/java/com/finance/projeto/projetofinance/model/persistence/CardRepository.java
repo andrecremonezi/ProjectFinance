@@ -5,13 +5,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.finance.projeto.projetofinance.model.entities.Card;
-import com.finance.projeto.projetofinance.model.entities.Receipe;
 
 import java.util.List;
 
-/**
- * Created by Andrea on 13/10/2015.
- */
+
 public class CardRepository {
 
     private CardRepository()

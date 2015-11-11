@@ -19,9 +19,7 @@ public class NewUserActivity extends AppCompatActivity{
     private EditText editTextNewPassword;
     private EditText editTextNewFirstName;
     private EditText editTextNewLastName;
-    private Button buttonCriar;
     private User user;
-    private Toolbar toolbar;
     public static final String PARAM_TASK = "PARAM_TASK";
 
     @Override
@@ -41,7 +39,7 @@ public class NewUserActivity extends AppCompatActivity{
     }
 
     private void bindToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_newLogin);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -58,7 +56,7 @@ public class NewUserActivity extends AppCompatActivity{
         Bundle extras = getIntent().getExtras();
 
         if(extras != null){
-            this.user = (User) extras.getParcelable(PARAM_TASK);
+            this.user = extras.getParcelable(PARAM_TASK);
         }
         this.user = this.user == null ? new User() : this.user;
     }
@@ -78,7 +76,7 @@ public class NewUserActivity extends AppCompatActivity{
     }
 
     public void bindButtonCreate(){
-        buttonCriar = (Button) findViewById(R.id.buttonCreateUser);
+        Button buttonCriar = (Button) findViewById(R.id.buttonCreateUser);
         buttonCriar.setOnClickListener(new View.OnClickListener() {
 
             @Override

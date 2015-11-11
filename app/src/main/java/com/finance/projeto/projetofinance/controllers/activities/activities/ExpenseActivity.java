@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -21,7 +20,6 @@ import com.finance.projeto.projetofinance.controllers.activities.adapters.Expens
 import com.finance.projeto.projetofinance.model.entities.Expense;
 import com.finance.projeto.projetofinance.model.services.ExpenseBussinessService;
 import com.melnykov.fab.FloatingActionButton;
-
 import java.text.DecimalFormat;
 import java.util.List;
 
@@ -32,8 +30,6 @@ public class ExpenseActivity extends AppCompatActivity {
     private TextView valueTotal;
     private TextView valueNextMonth;
     private TextView valueNextsMonths;
-    private FloatingActionButton buttonNewExpense;
-    private Toolbar toolbar;
     DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
@@ -72,7 +68,7 @@ public class ExpenseActivity extends AppCompatActivity {
     }
 
     public void bindToolbar(){
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_expense);
 
         setSupportActionBar(toolbar);
@@ -88,7 +84,7 @@ public class ExpenseActivity extends AppCompatActivity {
     }
 
     private void bindButtonNewExpense() {
-        buttonNewExpense = (FloatingActionButton ) findViewById(R.id.buttonNewExpense);
+        FloatingActionButton buttonNewExpense = (FloatingActionButton) findViewById(R.id.buttonNewExpense);
         buttonNewExpense.attachToListView(listViewExpense);
         
         buttonNewExpense.setOnClickListener(new View.OnClickListener() {

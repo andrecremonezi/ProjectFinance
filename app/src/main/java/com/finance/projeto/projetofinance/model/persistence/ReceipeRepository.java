@@ -3,10 +3,7 @@ package com.finance.projeto.projetofinance.model.persistence;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
-import com.finance.projeto.projetofinance.model.entities.Expense;
 import com.finance.projeto.projetofinance.model.entities.Receipe;
-
 import java.util.List;
 
 public class ReceipeRepository {
@@ -67,25 +64,6 @@ public class ReceipeRepository {
 
             return values;
         }
-
-    public static Double getTotalValue() {
-
-        DataBaseHelper dataBaseHelper = DataBaseHelper.getIstance();
-        SQLiteDatabase db = dataBaseHelper.getReadableDatabase();
-
-        Cursor cursor = db.rawQuery("SELECT SUM(VALUE) FROM receipe", null);
-        Double sum = 0.0;
-
-        if(cursor.moveToFirst())
-        {
-            sum = cursor.getDouble(0);
-        }
-
-        db.close();
-        dataBaseHelper.close();
-
-        return sum;
-    }
 
     public static Receipe getById(Long id) {
 

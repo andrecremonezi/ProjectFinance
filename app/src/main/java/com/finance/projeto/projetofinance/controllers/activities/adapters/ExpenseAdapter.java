@@ -153,7 +153,7 @@ public class ExpenseAdapter extends BaseAdapter {
 
         }
 
-        int colorPaid = 0;
+        int colorPaid;
 
         if(expense.getPaid().toString().equals("1")) {
             colorPaid = android.graphics.Color.parseColor("#C8E6C9");
@@ -166,11 +166,6 @@ public class ExpenseAdapter extends BaseAdapter {
         }
         return convertView;
 
-    }
-
-    public void setDataValues(List<Expense> values) {
-        expenseList.clear();
-        expenseList.addAll(values);
     }
 
     public static class ViewHolder {

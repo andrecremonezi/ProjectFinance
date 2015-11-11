@@ -33,15 +33,15 @@
 
         <TextView
             android:id="@+id/textViewTitleDetail"
-            android:text="Detalhes da despesa"
+            android:text="@string/detail_expense"
             android:textColor="@color/primaryColor"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/textViewDetailLabelName"
-            android:text="Nome da Despesa: "
+            android:text="@string/name_expense"
             android:layout_below="@+id/textViewTitleDetail"
             android:textColor="@color/navigationBarColor"
             android:layout_margin="3dp"
@@ -51,7 +51,7 @@
 
         <TextView
             android:id="@+id/textViewDetailName"
-            android:text="Despesa 01"
+            android:text="@string/expense"
             android:layout_below="@+id/textViewTitleDetail"
             android:layout_margin="3dp"
             android:layout_toRightOf="@+id/textViewDetailLabelName"
@@ -60,7 +60,7 @@
 
         <TextView
             android:id="@+id/textViewDetailLabelValue"
-            android:text="Valor R$: "
+            android:text="@string/rs_value"
             android:textColor="@color/navigationBarColor"
             android:layout_margin="3dp"
             android:layout_below="@+id/textViewDetailLabelName"
@@ -69,7 +69,6 @@
 
         <TextView
             android:id="@+id/textViewDetailValue"
-            android:text="00.00"
             android:textColor="@color/primaryColor"
             android:layout_margin="3dp"
             android:layout_below="@+id/textViewDetailLabelName"
@@ -79,7 +78,7 @@
 
         <TextView
             android:id="@+id/textViewDetailLabelCategory"
-            android:text="Categoria: "
+            android:text="@string/Category"
             android:layout_margin="3dp"
             android:layout_below="@+id/textViewDetailLabelValue"
             android:textColor="@color/navigationBarColor"
@@ -88,7 +87,7 @@
 
         <TextView
             android:id="@+id/textViewDetailCategory"
-            android:text="Categoria 01"
+            android:text="@string/category_label"
             android:layout_below="@+id/textViewDetailLabelValue"
             android:layout_toRightOf="@+id/textViewDetailLabelCategory"
             android:layout_margin="3dp"
@@ -97,7 +96,7 @@
 
         <TextView
             android:id="@+id/textViewDetailLabelForm"
-            android:text="Forma de pagamento: "
+            android:text="@string/method_payment"
             android:layout_below="@+id/textViewDetailCategory"
             android:layout_margin="3dp"
             android:textColor="@color/navigationBarColor"
@@ -106,7 +105,7 @@
 
         <TextView
             android:id="@+id/textViewDetailForm"
-            android:text="Carteira"
+            android:text="@string/method"
             android:layout_margin="3dp"
             android:layout_below="@+id/textViewDetailCategory"
             android:layout_toRightOf="@+id/textViewDetailLabelForm"
@@ -115,7 +114,7 @@
 
         <TextView
             android:id="@+id/textViewDetailLabelMonth"
-            android:text="Mês: "
+            android:text="@string/month_label"
             android:textColor="@color/navigationBarColor"
             android:layout_below="@+id/textViewDetailLabelForm"
             android:layout_margin="3dp"
@@ -124,7 +123,7 @@
 
             <TextView
                 android:id="@+id/textViewDetailMonth"
-                android:text="Janeiro"
+                android:text="@string/month"
                 android:layout_margin="3dp"
                 android:layout_below="@+id/textViewDetailLabelForm"
                 android:layout_toRightOf="@+id/textViewDetailLabelMonth"
@@ -133,7 +132,7 @@
 
         <TextView
             android:id="@+id/textViewLabelPaid"
-            android:text="Status pagamento: "
+            android:text="@string/status_payment"
             android:layout_margin="3dp"
             android:textColor="@color/navigationBarColor"
             android:layout_below="@+id/textViewDetailMonth"
@@ -142,7 +141,6 @@
 
         <TextView
             android:id="@+id/textViewPaid"
-            android:text="Pago"
             android:layout_margin="3dp"
             android:layout_toRightOf="@+id/textViewLabelPaid"
             android:layout_below="@+id/textViewDetailMonth"

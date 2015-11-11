@@ -61,9 +61,7 @@ public class Card implements Parcelable {
 
         Card card = (Card) o;
 
-        if (id != null ? !id.equals(card.id) : card.id != null) return false;
-        if (name != null ? !name.equals(card.name) : card.name != null) return false;
-        return !(limitValue != null ? !limitValue.equals(card.limitValue) : card.limitValue != null);
+        return !(id != null ? !id.equals(card.id) : card.id != null) && !(name != null ? !name.equals(card.name) : card.name != null) && !(limitValue != null ? !limitValue.equals(card.limitValue) : card.limitValue != null);
     }
 
     @Override

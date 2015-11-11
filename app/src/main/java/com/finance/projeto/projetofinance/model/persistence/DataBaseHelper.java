@@ -4,13 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
-import com.finance.projeto.projetofinance.model.entities.Receipe;
 import com.finance.projeto.projetofinance.util.ApplicationUtil;
 
-/**
- * Created by Andrea on 26/09/2015.
- */
+
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "taskmanagerdb";

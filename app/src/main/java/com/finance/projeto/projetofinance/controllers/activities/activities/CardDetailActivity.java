@@ -23,9 +23,6 @@ public class CardDetailActivity extends AppCompatActivity {
     private TextView textViewDetailName;
     private TextView textViewDetailValue;
     private Card card;
-    private Toolbar toolbar;
-    private Button buttonEditar;
-    private Button buttonDeletar;
     DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
@@ -65,7 +62,7 @@ public class CardDetailActivity extends AppCompatActivity {
     }
 
     public void bindToolbar(){
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_item);
 
         setSupportActionBar(toolbar);
@@ -91,7 +88,7 @@ public class CardDetailActivity extends AppCompatActivity {
     }
 
     public void bindButtonDelete(){
-        buttonDeletar = (Button) findViewById(R.id.buttonDeleteItemCard);
+        Button buttonDeletar = (Button) findViewById(R.id.buttonDeleteItemCard);
         buttonDeletar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,7 +117,7 @@ public class CardDetailActivity extends AppCompatActivity {
     }
 
     public void bindButtonEdit(){
-        buttonEditar = (Button) findViewById(R.id.buttonEditItemCard);
+        Button buttonEditar = (Button) findViewById(R.id.buttonEditItemCard);
         buttonEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

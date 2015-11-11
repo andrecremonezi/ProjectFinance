@@ -8,9 +8,6 @@ import com.finance.projeto.projetofinance.model.entities.User;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Andrea on 26/09/2015.
- */
 public class UserContract {
     public static final String TABLE     = "user";
     public static final String ID        = "id";
@@ -27,17 +24,8 @@ public class UserContract {
     }
 
     public static String getCreateTableScript(){
-        final StringBuilder create = new StringBuilder();
-        create.append(" CREATE TABLE " + TABLE);
-        create.append(" ( ");
-        create.append(ID + " INTEGER PRIMARY KEY, ");
-        create.append(USER + " TEXT NOT NULL, ");
-        create.append(PASSWORD + " TEXT NOT NULL, ");
-        create.append(FIRSTNAME + " TEXT NOT NULL, ");
-        create.append(LASTNAME + " TEXT NOT NULL ");
-        create.append(" ); ");
 
-        return create.toString();
+        return (" CREATE TABLE " + TABLE) + " ( " + ID + " INTEGER PRIMARY KEY, " + USER + " TEXT NOT NULL, " + PASSWORD + " TEXT NOT NULL, " + FIRSTNAME + " TEXT NOT NULL, " + LASTNAME + " TEXT NOT NULL " + " ); ";
     }
 
     public static ContentValues getContentValues(User user) {
@@ -68,7 +56,6 @@ public class UserContract {
     }
 
     public static List<User> getUsers(Cursor cursor) {
-        User user = new User();
         List<User> users = new ArrayList<>();
 
         while (cursor.moveToNext()) {

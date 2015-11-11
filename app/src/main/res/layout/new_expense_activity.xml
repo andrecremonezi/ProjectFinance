@@ -45,7 +45,7 @@
                 android:orientation="vertical"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
 
 
@@ -142,16 +142,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/lbl_yes"
-                    android:id="@+id/rY"
-                    android:layout_below="@+id/spinnerNewMonthExpense"/>
+                    android:id="@+id/rY"/>
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/lbl_no"
                     android:checked="true"
-                    android:id="@+id/rN"
-                    android:layout_below="@+id/spinnerNewMonthExpense"/>
+                    android:id="@+id/rN"/>
 
                 </RadioGroup>
     <Button

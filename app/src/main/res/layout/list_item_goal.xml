@@ -18,7 +18,7 @@
                     android:textSize="20sp"
                     android:textColor="@color/primaryColor"
                     android:id="@+id/textViewGoalCategory"
-                    android:text="Category"
+                    android:text="@string/category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -32,7 +32,7 @@
 
             <TextView
                 android:id="@+id/textViewGoalCurrentValue"
-                android:text="Value Current"
+                android:text="@string/current_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textViewGoalCategory"
@@ -52,7 +52,7 @@
 
     <TextView
         android:id="@+id/textViewGoalTotalValue"
-        android:text="Value Total"
+        android:text="@string/value_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textviewLabelAmountSpent"
@@ -66,9 +66,6 @@
             android:layout_width="wrap_content"
             app:progress_text_size="15dp"
         android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textviewLabelAmountSpent"
-            android:layout_toRightOf="@+id/textViewGoalCurrentValue"
-            android:layout_toEndOf="@+id/textViewGoalCurrentValue"
             android:layout_margin="10dp"
             app:progress_text_color="@color/primaryColor"
             app:progress_reached_color="#26A69A"

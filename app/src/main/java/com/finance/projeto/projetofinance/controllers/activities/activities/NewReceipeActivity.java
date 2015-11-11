@@ -27,8 +27,6 @@ public class NewReceipeActivity extends AppCompatActivity {
     private Spinner  spinnerType;
     private Spinner  spinnerWallatOrBank;
     private Receipe  receipe;
-    private Button buttonSave;
-    private Toolbar toolbar;
     public static final String PARAM_TASK = "PARAM_TASK";
 
     public NewReceipeActivity(){
@@ -54,7 +52,7 @@ public class NewReceipeActivity extends AppCompatActivity {
     }
 
     private void bindToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_newReceipe);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -71,7 +69,7 @@ public class NewReceipeActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
 
         if(extras != null){
-            this.receipe = (Receipe) extras.getParcelable(PARAM_TASK);
+            this.receipe = extras.getParcelable(PARAM_TASK);
         }
 
         this.receipe = this.receipe == null ? new Receipe() : this.receipe;
@@ -83,7 +81,7 @@ public class NewReceipeActivity extends AppCompatActivity {
     }
 
     private void bindButtonSave() {
-        buttonSave = (Button) findViewById(R.id.buttonAddReceipe);
+        Button buttonSave = (Button) findViewById(R.id.buttonAddReceipe);
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,14 +114,14 @@ public class NewReceipeActivity extends AppCompatActivity {
 
     private void bindFields() {
         editTextDescription = (EditText) findViewById(R.id.editTextNewDescriptionReceipe);
-        editTextDescription.setText(this.receipe.getDescription() == null ? "" : this.receipe.getDescription().toString());
+        editTextDescription.setText(this.receipe.getDescription() == null ? "" : this.receipe.getDescription());
 
         editTextValue       = (EditText) findViewById(R.id.editTextNewValueReceipe);
         editTextValue.setText(this.receipe.getValue() == null ? "" : this.receipe.getValue().toString());
     }
 
     public void bindSpinnerNewWalletOrBank(){
-        ArrayAdapter<String> adapterWalletOrbank = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, walletOrBank);
+        ArrayAdapter<String> adapterWalletOrbank = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, walletOrBank);
         adapterWalletOrbank.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerWallatOrBank = (Spinner)  findViewById(R.id.spinnerNewWalletOrBank);
         spinnerWallatOrBank.setAdapter(adapterWalletOrbank);
@@ -134,7 +132,7 @@ public class NewReceipeActivity extends AppCompatActivity {
 
     public void bindSpinnerTypeCategory(){
         spinnerType = (Spinner) findViewById(R.id.spinnerNewTypeReceipe);
-        ArrayAdapter<String> adapterCategory = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, typeCategory);
+        ArrayAdapter<String> adapterCategory = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, typeCategory);
         adapterCategory.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerType = (Spinner) findViewById(R.id.spinnerNewTypeReceipe);
         spinnerType.setAdapter(adapterCategory);

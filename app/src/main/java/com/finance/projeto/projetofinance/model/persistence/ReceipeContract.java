@@ -2,9 +2,7 @@ package com.finance.projeto.projetofinance.model.persistence;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-
 import com.finance.projeto.projetofinance.model.entities.Receipe;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,18 +22,8 @@ public class ReceipeContract {
     }
 
     public static String getCreateTableScript(){
-        final StringBuilder create = new StringBuilder();
-        create.append(" CREATE TABLE " + TABLE);
-        create.append(" ( ");
-        create.append(ID + " INTEGER PRIMARY KEY, ");
-        create.append(DESCRIPTION + " TEXT NOT NULL, ");
-        create.append(VALUE + " FLOAT NOT NULL, ");
-        create.append(TYPE + " TEXT, ");
-        create.append(WALLATORBANK + " TEXT, ");
-        create.append(MONTH + " TEXT ");
-        create.append(" ); ");
 
-        return create.toString();
+        return (" CREATE TABLE " + TABLE) + " ( " + ID + " INTEGER PRIMARY KEY, " + DESCRIPTION + " TEXT NOT NULL, " + VALUE + " FLOAT NOT NULL, " + TYPE + " TEXT, " + WALLATORBANK + " TEXT, " + MONTH + " TEXT " + " ); ";
     }
 
     public static ContentValues getContentValues(Receipe receipe) {
@@ -67,7 +55,6 @@ public class ReceipeContract {
     }
 
     public static List<Receipe> getReceipes(Cursor cursor) {
-        Receipe receipe = new Receipe();
         List<Receipe> receipes = new ArrayList<>();
 
         while (cursor.moveToNext()) {

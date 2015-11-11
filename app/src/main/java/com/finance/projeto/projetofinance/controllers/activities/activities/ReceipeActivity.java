@@ -15,28 +15,18 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.finance.projeto.projetofinance.R;
-
 import com.finance.projeto.projetofinance.controllers.activities.adapters.ReceipeAdapter;
-import com.finance.projeto.projetofinance.model.entities.Expense;
 import com.finance.projeto.projetofinance.model.entities.Receipe;
-import com.finance.projeto.projetofinance.model.services.ExpenseBussinessService;
 import com.finance.projeto.projetofinance.model.services.ReceipeBussinessService;
 import com.melnykov.fab.FloatingActionButton;
-
 import java.text.DecimalFormat;
 import java.util.List;
 
-/**
- * Created by Andrea on 26/09/2015.
- */
 public class ReceipeActivity extends AppCompatActivity {
     public static final String DETAIL_RECEIPE = "DETAIL_RECEIPE";
     private ListView listViewReceipe;
     private Receipe  selectedReceipe;
-    private FloatingActionButton   buttonNewReceipe;
-    private Toolbar toolbar;
     private TextView totalReceipe;
     DecimalFormat df = new DecimalFormat("0.00");
 
@@ -65,7 +55,7 @@ public class ReceipeActivity extends AppCompatActivity {
         totalReceipe.setText(getString(R.string.total) + " " + df.format(totalReceipeValue));
     }
     private void bindToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_receipe);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -79,7 +69,7 @@ public class ReceipeActivity extends AppCompatActivity {
     }
 
     private void bindButtonNewReceipe() {
-        buttonNewReceipe = (FloatingActionButton) findViewById(R.id.buttonNewReceipe);
+        FloatingActionButton buttonNewReceipe = (FloatingActionButton) findViewById(R.id.buttonNewReceipe);
         buttonNewReceipe.attachToListView(listViewReceipe);
         buttonNewReceipe.setOnClickListener(new View.OnClickListener() {
 

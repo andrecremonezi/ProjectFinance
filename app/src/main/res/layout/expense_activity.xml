@@ -25,8 +25,8 @@
 
         <TextView
             android:id="@+id/textViewListExpenseValueTotal"
-            android:text="Total R$ 00.00"
-            android:textSize="15dp"
+            android:text="@string/total_value"
+            android:textSize="15sp"
             android:layout_gravity="center"
             android:textColor="@color/primaryColor"
             android:layout_width="wrap_content"
@@ -34,18 +34,18 @@
 
         <TextView
             android:id="@+id/textViewTotalNextMonth"
-            android:text="Total próximo mês R$ 00.00"
+            android:text="@string/total_value_next_month"
             android:textColor="#E57373"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/textViewTotalNextsMonths"
-                android:text="Total próximo mês R$ 00.00"
+                android:text="@string/value_next_month_total"
                 android:textColor="#64B5F6"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

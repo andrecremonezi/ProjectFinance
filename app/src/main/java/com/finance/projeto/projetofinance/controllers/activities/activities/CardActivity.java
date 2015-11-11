@@ -25,7 +25,6 @@ public class CardActivity extends AppCompatActivity {
     private ListView listViewCard;
     private Card selectedCard;
     private FloatingActionButton buttonNewCard;
-    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,7 @@ public class CardActivity extends AppCompatActivity {
     }
 
     public void bindToolbar(){
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.label_card);
 
         setSupportActionBar(toolbar);

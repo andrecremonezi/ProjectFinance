@@ -3,9 +3,7 @@ package com.finance.projeto.projetofinance.model.persistence;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
 import com.finance.projeto.projetofinance.model.entities.User;
-
 import java.util.List;
 
 public class UserRepository {

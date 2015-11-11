@@ -10,7 +10,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:layout_below="@id/toolbar"
         android:background="@drawable/toolbar_dropshadow" />
 
     <LinearLayout
@@ -21,13 +20,13 @@
 
     <EditText
         android:id="@+id/editTextUser"
-        android:hint="User"
+        android:hint="@string/user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/editTextPassWord"
-        android:hint="Password"
+        android:hint="@string/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:password="true"/>
@@ -40,7 +39,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:text="New User"
+            android:text="@string/new_user"
             style="?android:attr/borderlessButtonStyle"
             android:textColor="@color/primaryColor"
             android:id="@+id/buttonNewUser"
@@ -51,7 +50,7 @@
             android:layout_toStartOf="@+id/buttonLogin" />
 
         <Button
-            android:text="Login"
+            android:text="@string/login"
             style="?android:attr/borderlessButtonStyle"
             android:id="@+id/buttonLogin"
             android:textColor="@color/primaryColor"

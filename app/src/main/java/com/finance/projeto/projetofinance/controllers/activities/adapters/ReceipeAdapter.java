@@ -59,11 +59,11 @@ public class ReceipeAdapter extends BaseAdapter {
         //textViewLabelLetter.setText(first);
 
         TextView textViewForm = (TextView) receipeListView.findViewById(R.id.textViewReceipeForm);
-        textViewForm.setText(receipe.getWalletOrBank().toString());
+        textViewForm.setText(receipe.getWalletOrBank());
 
         //int hexColor;
 
-        switch (receipe.getType().toString()) {
+        switch (receipe.getType()) {
             case "Salário":
                 textViewLabelLetter.setImageResource(R.drawable.salario);
                 break;
@@ -80,8 +80,4 @@ public class ReceipeAdapter extends BaseAdapter {
             return receipeListView;
     }
 
-    public void setDataValues(List<Receipe> values) {
-        receipeList.clear();
-        receipeList.addAll(values);
-    }
 }
