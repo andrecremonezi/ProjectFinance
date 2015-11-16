@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         for(Card card : cards){
             limitCard += card.getLimitValue();
-            textViewCardName.setText(getString(R.string.label_card_name) + " " + card.getName());
+            textViewCardName.setText(card.getName());
         }
         textViewLimitValue.setText(getString(R.string.label_card_total_value) + " " + df.format(limitCard));
 

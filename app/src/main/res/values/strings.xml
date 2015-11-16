@@ -61,8 +61,8 @@
     <string name="day">Day</string>
     <string name="form">Form</string>
     <string name="label_info">Informações deste mês</string>
-    <string name="label_total_receipe">Total em Receitas: R$</string>
-    <string name="label_total_expense">Total em Despesas: R$</string>
+    <string name="label_total_receipe">Total em Receitas R$</string>
+    <string name="label_total_expense">Total em Despesas R$</string>
     <string name="label_amount_spent_card">Value spent R$</string>
     <string name="label_card_name">Name do cartão </string>
     <string name="value_next_month">Cumulative value</string>
@@ -134,6 +134,7 @@
     <string name="method_receipe">Forma de recebimento:</string>
     <string name="label_month">Mês:</string>
     <string name="value_rs_rs">Valor limite R$</string>
+    <string name="label_info_next">Inf next month</string>
 
 
 </resources>

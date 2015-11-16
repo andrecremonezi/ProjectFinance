@@ -72,6 +72,8 @@
     <string name="lbl_confirm_delet_goal">Confirmar exclusão da meta</string>
     <string name="msg_confirm_delete_goal">Deletar esta meta?</string>
     <string name="radio_check">Esta despesa está paga?</string>
+    <string name="label_info_next">Informações do próximo mês</string>
+
 
 
 </resources>
